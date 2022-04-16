@@ -1,0 +1,107 @@
+html,
+body {
+    min-height: 100vh;
+}
+
+body {
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 960px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15pt;
+}
+
+img {
+    max-width: 100%;
+}
+
+.ct {
+    text-align: center;
+}
+
+h2 {
+    font-size: 130%;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+p {
+    margin-top: 0;
+}
+
+/* map */
+
+#map {
+    position: relative;
+    aspect-ratio: 1.452;
+}
+
+#map img {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+#areas {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    padding: 1%;
+    gap: 1%;
+}
+
+#areas>div {
+    box-shadow: 0 0 0 3px inset rgba(0,0,0,0.5);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#areas>div:nth-child(1) {
+    width: 16%;
+    height: 34%;
+}
+
+#areas>div:nth-child(2) {
+    width: 14%;
+    height: 42%;
+}
+
+#areas>div:nth-child(3) {
+    width: 18%;
+    height: 21%;
+}
+
+#areas>div:nth-child(4) {
+    width: 57%;
+    height: 83%;
+}
+
+#areas>div:nth-child(5) {
+    width: 57%;
+    height: 15%;
+}
+
+#areas>div:nth-child(6) {
+    width: 23%;
+    height: 99%;
+}
+
+#map table {
+    width: 100%;
+    height: 66%;
+}
+
+@media screen and (min-width: 769px) {
+    .title img {
+        max-width: 70%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #map {
+        font-size: 70%;
+    }
+}
