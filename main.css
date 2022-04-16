@@ -15,8 +15,28 @@ img {
     max-width: 100%;
 }
 
+a {
+    color: darkred;
+}
+
 .ct {
     text-align: center;
+}
+
+#toc {
+    padding-bottom: 1em;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+nav a {
+    padding: 1em 2em;
+    background-color: lightgrey;
+    border-radius: 3px;
 }
 
 h2 {
@@ -27,6 +47,27 @@ h2 {
 
 p {
     margin-top: 0;
+}
+
+ul li {
+    margin: 2em 0;
+}
+
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.steps>div {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+}
+
+.steps img {
+    vertical-align: middle;
+    max-width: 50%;
 }
 
 /* map */
@@ -52,7 +93,7 @@ p {
 }
 
 #areas>div {
-    box-shadow: 0 0 0 3px inset rgba(0,0,0,0.5);
+    box-shadow: 0 0 0 3px inset rgba(0, 0, 0, 0.5);
     text-align: center;
     display: flex;
     justify-content: center;
@@ -101,6 +142,23 @@ p {
 }
 
 @media screen and (max-width: 768px) {
+
+    ul {
+        padding-left: 1em;
+    }
+
+    .steps>div {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .steps img {
+        display: block;
+        margin: 0 auto;
+        max-width: fit-content;
+        width: 100%;
+    }
+
     #map {
         font-size: 70%;
     }
