@@ -7,7 +7,6 @@
     <title>Island Alone Manual</title>
     <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
 </head>
 
 <body>
@@ -36,6 +35,8 @@
             <a href="#survival">Survival</a>
             <a href="#survivalpoints">Survival points</a>
             <a href="#turn">Player's turn</a>
+            <a href="#scenarios">Scenarios and maps</a>
+            <a href="#endgame">End of game</a>
         </nav>
     </section>
 
@@ -48,8 +49,8 @@
             1 player: solo game sheet, pencil or pen, 4 D6 dice, character marker (meeple preferred), scenario card<br>
             <br>
             2-4 players: a character sheet for each player, a common map card for all players, 4 D6 dice, a pen or
-            pencil
-            for each player, character markers for each player (preferably different colored meeples), scenario card
+            pencil for each player, character markers for each player (preferably different colored meeples), scenario
+            card
         </p>
 
         <h2 id="islandmap">Island map (solo game)</h2>
@@ -510,6 +511,87 @@
                 </div>
             </div>
         </div>
+
+        <p>A player who dies before the end of the game keeps his points and takes part in the points summary with other
+            players if he or she managed to meet the scenario requirements. If not, then they compete in points with
+            only the other players who also failed to complete the task.</p>
+    </section>
+
+    <section>
+        <h2 id="meetings">Player meetings</h2>
+        <p>In multiplayer, players who are on adjacent fields can interact with each other:</p>
+        <ul>
+            <li>trade: players can trade or donate any resources (food, water, resources).</li>
+            <li>fight: when a fight takes place, the attacker chooses a maximum of 2 weapons to use (which they have
+                previously created). Then he rolls 4 D6 dice. In this way he determines the sum of his attack points.
+                Each value equal to the value of the dice used to creating an item means one attack point (a maximum of
+                4). Then the attacked player takes the same action and creates his attack point pool - if he has no
+                weapon he creates points for each pair of dice (so he can have maximum 2 points). This method can only
+                be used if the player has no weapons (if they have any they automatically use it).<br>
+                <br>
+                Combat is not counted as a turn's action (you don't have to pay for it with action points from the dice)
+                but it ends the attacking player's turn (even if he still had dice to use).
+            </li>
+        </ul>
+
+        <p><strong>If a player has a bow he can also attack a player one field away from him in a straight
+                line (see below).</strong></p>
+
+        <h3>How to fight</h3>
+        <p>These 4 items can be used as weapons:</p>
+        <div class="steps">
+            <div>
+                <img src="./images/fight_attack.png">
+                <span>Attacking player rolls 1, 3, 5 and 4 Which gives him 3 attack points</span>
+            </div>
+            <div>
+                <img src="./images/fight_defend.png">
+                <span>Defending player throws 1, 1, 3 and 5 Which gives him 2 attack points</span>
+            </div>
+        </div>
+
+        <p>The player who lost the battle loses 1 health point. In case of a tie, no one takes damage.</p>
+        <p><strong>You cannot use combat to kill another player! If he has only 1 health point, he loses 1 resource of
+                his choice.<br>
+                <br>
+                If he doesn't have any, he can't can be attacked or attack others!</strong></p>
+
+        <h3>Attacking with the bow</h3>
+        <img src="./images/attack_with_bow.png">
+        <p>When attacking with a bow, there must be no obstacle between players and can only be attacked on fields
+            connected in a straight line by hex border).</p>
+        <p>This attack proceeds in the same way (attacker rolls 4 D6 and for every 3 and 6 he has an attack point) but
+            defending player:<br>
+            -fights back if he also has a bow (he also rolls 4 D6 and the one who has more attack points deals
+            damage).<br>
+            -if he does not have a bow, he performs the stealth action according to the same rules as unarmed
+            combat (roll 4 D6 and each pair is a point, maximum 2) but if he wins, he doesn't deal damage, he just
+            avoids it (this also occurs when the attacker does not have any attack points).</p>
+
+        <p class="important">During combat, you cannot use survival points to manipulate dice results, only to roll
+            again!<br>
+            You can use 1 (only 1) mask to change the value per fight.</p>
+    </section>
+
+    <section>
+        <h2 id="scenarios">Scenarios and maps</h2>
+
+        <p>Before the game, we choose or draw a map and a scenario. Each scenario can be played on
+            any map, but some maps also have their own unique rules.</p>
+
+    </section>
+
+    <section>
+        <h2 id="endgame">End of game</h2>
+
+        <p>The game ends after the number of turns specified in the scenario, when all players die, or after the
+            scenario is completed (or failed).<br>
+            <br>
+            We count all the points scored and the player with the highest total wins (in case of a solo game save the
+            score and try to beat it in the next games comparing also with 'glory list' for the given map/scenario).<br>
+            <br>
+            Points are counted for all earned ⭐ (counted multiple times for multiple campfires and tents).
+        </p>
     </section>
 
 </body>
