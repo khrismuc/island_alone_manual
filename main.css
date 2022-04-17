@@ -27,14 +27,15 @@ a {
     padding-bottom: 1em;
 }
 
-nav {
+nav, nav div {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
 }
 
 nav a {
-    padding: 1em 2em;
+    font-size: 90%;
+    padding: 0.5em 1em;
     background-color: lightgrey;
     border-radius: 3px;
 }
@@ -68,6 +69,10 @@ ul li {
 .steps img {
     vertical-align: middle;
     max-width: 50%;
+}
+
+.steps hr {
+    width: 90%;
 }
 
 /* map */
