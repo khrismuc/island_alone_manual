@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset='utf-8'>
@@ -11,7 +11,7 @@
 
 <body>
 
-    <h1 class="ct title"><img src="images/title.gif"></h1>
+    <h1 class="ct title"><img src="images/title.gif" alt="Island Alone"></h1>
     <p class="ct">You are on a deserted island far away from civilization. Your task is first and foremost to survive.
     </p>
     <p><a href="https://hammerdice.com/en_US/p/Island-Alone-CORE/56" target="_blank">Visit game website</a></p>
@@ -27,7 +27,7 @@
             <div style="padding: 0.5em; border: 1px solid lightgrey; border-radius: 3px;">
                 <span>Actions:</span>
                 <a href="#actions">Move</a>
-                <a href="#collectresources">Collect resources</a>
+                <a href="#resources">Collect resources</a>
                 <a href="#tasks">Perform tasks</a>
                 <a href="#createitems">Create items</a>
             </div>
@@ -55,16 +55,28 @@
 
         <h2 id="islandmap">Island map (solo game)</h2>
         <div id="map">
-            <img src="./images/solo_map.png">
+            <img src="./images/solo_map.png" alt="Solo player map">
             <div id="areas">
                 <div>
-                    <p>Water / Food / Health</p>
+                    <a href="#survival">Water / Food / Health</a>
                 </div>
-                <div>Tasks</div>
-                <div>Resources</div>
-                <div>Map</div>
-                <div>Time track / Survival points</div>
-                <div>Craftable items</div>
+                <div>
+                    <a href="#tasks">Tasks</a>
+                </div>
+                <div>
+                    <a href="#resources">Resources</a>
+                </div>
+                <div>
+                    Map
+                </div>
+                <div style="gap: 0.3em;">
+                    <a href="#survival">Time track</a>
+                    /
+                    <a href="#survivalpoints">Survival points</a>
+                </div>
+                <div>
+                    <a href="#items">Craftable items</a>
+                </div>
             </div>
         </div>
     </section>
@@ -90,7 +102,7 @@
                 <br>
                 <div class="steps">
                     <div>
-                        <img src="./images/move_expl.png">
+                        <img src="./images/move_expl.png" alt="moving anywhere except palmtree fields">
                         <span>
                             Palm fields are an obstacle that you always you have to go around. You can't go through them
                             nor can't stop there.
@@ -104,21 +116,21 @@
                 on which you want to perform the action (e.g. move 2 fields using dice with a value of 6). However, this
                 means the player ends their move and loses any remaining points on the die that was used to move.
             </li>
-            <li id="collectresources">
+            <li id="resources">
                 <h3>Collect resources:</h3>
                 There are 3 resources needed to create items in the game.<br>
                 <br>
                 <div class="steps">
                     <div>
-                        <img src="./images/res_wood.png">
+                        <img src="./images/res_wood.png" alt="resource: wood">
                         <span>Wood</span>
                     </div>
                     <div>
-                        <img src="./images/res_rope.png">
+                        <img src="./images/res_rope.png" alt="resource: rope">
                         <span>Rope</span>
                     </div>
                     <div>
-                        <img src="./images/res_stone.png">
+                        <img src="./images/res_stone.png" alt="resource: stone">
                         <span>Stone</span>
                     </div>
                 </div>
@@ -128,15 +140,15 @@
                 <br>
                 <div class="steps">
                     <div>
-                        <img src="./images/collecting_resources_1.png">
+                        <img src="./images/collecting_resources_1.png" alt="stopping at resource field to collect it">
                         <span>We stop at the field of the resource that we want to get.</span>
                     </div>
                     <div>
-                        <img src="./images/any_die.png">
+                        <img src="./images/any_die.png" alt="pay a cost of any die">
                         <span>We pay the cost of any one die and cross out the resource from the map.</span>
                     </div>
                     <div>
-                        <img src="./images/collecting_resources_2.png">
+                        <img src="./images/collecting_resources_2.png" alt="tally the resource in your inventory">
                         <span>We mark the acquisition of a resource in the inventory.</span>
                     </div>
                 </div>
@@ -148,7 +160,7 @@
                 <br>
                 <div class="steps">
                     <div>
-                        <img src="./images/marked_field.png">
+                        <img src="./images/marked_field.png" alt="a field with resource marked by a die">
                         <span>
                             Resources and food/water can be captured with any die, but each field of this type is also
                             marked with a die value.<br>
@@ -165,7 +177,7 @@
                 <br>
                 <div class="steps">
                     <div>
-                        <img src="./images/tasks_crystals.png">
+                        <img src="./images/tasks_crystals.png" alt="crystal task">
                         <span>
                             <strong>Collecting crystals</strong><br>
                             Precious crystals can be found on the island. After returning to civilization they can
@@ -183,7 +195,7 @@
                     </div>
                     <hr>
                     <div>
-                        <img src="./images/tasks_smokesign.png">
+                        <img src="./images/tasks_smokesign.png" alt="smokesign task">
                         <span>
                             <strong>Smoke signs</strong><br>
                             In certain places on the island we can make smoke signs with a campfire. This way we
@@ -203,7 +215,7 @@
                     </div>
                     <hr>
                     <div>
-                        <img src="./images/tasks_masks.png">
+                        <img src="./images/tasks_masks.png" alt="mask task">
                         <span>
                             <strong>Masks</strong><br>
                             Mysterious masks can be found in many corners of the island.<br>
@@ -220,7 +232,7 @@
                     </div>
                     <hr>
                     <div>
-                        <img src="./images/tasks_map.png">
+                        <img src="./images/tasks_map.png" alt="map task">
                         <span>
                             <strong>Island map</strong><br>
                             When you reach certain locations on the island, it is possible to make a map of the
@@ -252,7 +264,7 @@
 
         <div class="steps">
             <div>
-                <img src="./images/item_pickaxe.png">
+                <img src="./images/item_pickaxe.png" alt="item: pickaxe">
                 <div>
                     <h3>Pickaxe</h3>
                     To create a pickaxe we need dice 1 and 3 and one wood and stone.<br>
@@ -265,7 +277,7 @@
             </div>
             <hr>
             <div>
-                <img src="./images/item_axe.png">
+                <img src="./images/item_axe.png" alt="item: axe">
                 <div>
                     <h3>Axe</h3>
                     To create a axe we need dice 2 and 4 and one wood and stone.<br>
@@ -278,7 +290,7 @@
             </div>
             <hr>
             <div>
-                <img src="./images/item_knife.png">
+                <img src="./images/item_knife.png" alt="item: knife">
                 <div>
                     <h3>Knife</h3>
                     To create a knife we need dice 3 and 5 and one wood and stone.<br>
@@ -291,7 +303,7 @@
             </div>
             <hr>
             <div>
-                <img src="./images/item_pot.png">
+                <img src="./images/item_pot.png" alt="item: pot">
                 <div>
                     <h3>Pot</h3>
                     To create a pot we need dice 4 and 6 and one wood and stone.<br>
@@ -304,7 +316,7 @@
             </div>
             <hr>
             <div>
-                <img src="./images/item_flask.png">
+                <img src="./images/item_flask.png" alt="item: flask">
                 <div>
                     <h3>Flask</h3>
                     To create a flask we need dice 5 and 2 and one wood and rope.<br>
@@ -317,7 +329,7 @@
             </div>
             <hr>
             <div>
-                <img src="./images/item_bow.png">
+                <img src="./images/item_bow.png" alt="item: bow">
                 <div>
                     <h3>Bow</h3>
                     To create a bow we need dice 6 and 3 and one wood and rope.<br>
@@ -330,7 +342,7 @@
                     <br>
                     <div class="steps">
                         <div>
-                            <img src="./images/hunt.png"><br>
+                            <img src="./images/hunt.png" alt="hunting a lizard"><br>
                             <span>In order to hunt this lizard you must use a die with a value of 3 or more.</span>
                         </div>
                     </div>
@@ -340,7 +352,7 @@
             </div>
             <hr>
             <div>
-                <img src="./images/item_tent.png">
+                <img src="./images/item_tent.png" alt="item: tent">
                 <div>
                     <h3>Tent</h3>
                     To make a tent we need dice 1, 2 and 5 and three rope.<br>
@@ -361,7 +373,7 @@
             </div>
             <hr>
             <div>
-                <img src="./images/item_campfire.png">
+                <img src="./images/item_campfire.png" alt="item: campfire">
                 <div>
                     <h3>Campfire</h3>
                     To make a campfire we need dice 1,3 and 6 and three wood pieces.<br>
@@ -383,7 +395,7 @@
             </div>
             <hr>
             <div>
-                <img src="./images/item_raft.png">
+                <img src="./images/item_raft.png" alt="item: raft">
                 <div>
                     <h3>Raft</h3>
                     Raft To create the raft we need dice 1,2,3 and 4 and two of each wood, rope and stone.<br>
@@ -400,12 +412,12 @@
         <h2 id="survival">Survival</h2>
         <p>Each turn of the game is marked on the time track.</p>
 
-        <img src="./images/survival_track.png">
+        <img src="./images/survival_track.png" alt="survival track showing water food consumption from day 3">
         <p>From turn 3, the player begins to eye hunger and thirst. In the turns marked with the corresponding symbols
             they
             must sacrifice a water or food resource.</p>
 
-        <img src="./images/survival_health.png">
+        <img src="./images/survival_health.png" alt="three health points">
         <p>If a player does not have the required food or water supply, they lose 1 health point. Losing all 3 health
             points means the end of the game for that player.</p>
         <p>
@@ -425,16 +437,16 @@
         <p>By using it we can:</p>
         <div class="steps">
             <div>
-                <img src="./images/inc_dec_die.png">
+                <img src="./images/inc_dec_die.png" alt="increase or decrease die value">
                 <span>Increase or decrease by 1 the value of one of the remaining (not yet used) die. An increase of 6
                     means going to the value of 1</span>
             </div>
             <div>
-                <img src="./images/reroll_die.png">
+                <img src="./images/reroll_die.png" alt="reroll a die">
                 <span>Roll one of the remaining unused die again.</span>
             </div>
             <div>
-                <img src="./images/pass_through_occupied_field.png">
+                <img src="./images/pass_through_occupied_field.png" alt="pass through occupied field">
                 <span>Pass through a blocked field (also by another player). However, you cannot stop there!</span>
             </div>
         </div>
@@ -455,12 +467,12 @@
 
         <div class="steps">
             <div>
-                <img src="./images/player_blocks.png">
+                <img src="./images/player_blocks.png" alt="field blocked by other player">
                 <span>A player may not pass or stop on a field already occupied by another player (they block this
                     field).</span>
             </div>
             <div>
-                <img src="./images/lizard_blocks.png">
+                <img src="./images/lizard_blocks.png" alt="field blocked by lizard">
                 <span>A player may not stand on a field occupied by a lizard if they don't have the bow and don't kill
                     the lizard</span>
             </div>
@@ -472,7 +484,7 @@
 
         <div class="steps">
             <div>
-                <img src="./images/hunting.png">
+                <img src="./images/hunting.png" alt="hunting with the bow">
                 <div>A player with a bow may enter a field with a lizard by sacrificing an additional die with a value
                     equal to or higher than the lizard's points for hunting. He gets 1 point of food for this.<br>
                     <br>
@@ -510,11 +522,11 @@
         <p>These 4 items can be used as weapons:</p>
         <div class="steps">
             <div>
-                <img src="./images/fight_attack.png">
+                <img src="./images/fight_attack.png" alt="throwing attack values">
                 <span>Attacking player rolls 1, 3, 5 and 4 Which gives him 3 attack points</span>
             </div>
             <div>
-                <img src="./images/fight_defend.png">
+                <img src="./images/fight_defend.png" alt="throwing defense values">
                 <span>Defending player throws 1, 1, 3 and 5 Which gives him 2 attack points</span>
             </div>
         </div>
@@ -526,7 +538,7 @@
                 If he doesn't have any, he can't can be attacked or attack others!</strong></p>
 
         <h3>Attacking with the bow</h3>
-        <img src="./images/attack_with_bow.png">
+        <img src="./images/attack_with_bow.png" alt="attacking a distant player with a bow">
         <p>When attacking with a bow, there must be no obstacle between players and can only be attacked on fields
             connected in a straight line by hex border).</p>
         <p>This attack proceeds in the same way (attacker rolls 4 D6 and for every 3 and 6 he has an attack point) but
@@ -562,6 +574,8 @@
             Points are counted for all earned ⭐ (counted multiple times for multiple campfires and tents).
         </p>
     </section>
+
+    <a id="backtotoc" href="#toc"><span class="desktop">Back to TOC</span><span class="mobile">↥</span></a>
 
 </body>
 
