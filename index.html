@@ -5,7 +5,7 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Island Alone Manual</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
 </head>
@@ -17,241 +17,501 @@
     </p>
     <p><a href="https://hammerdice.com/en_US/p/Island-Alone-CORE/56" target="_blank">Visit game website</a></p>
     <p>1-4 players, age 8+, game time 15-30 min</p>
-    <h2 id="toc">Table of contents</h2>
-    <nav>
-        <a href="#objective">Game objective</a>
-        <a href="#preparation">Game preparation</a>
-        <a href="#islandmap">Map overview</a>
-        <a href="#gameplay">Course of play</a>
-        <div style="padding: 0.5em; border: 1px solid lightgrey; border-radius: 3px;">
-            <span>Actions:</span>
-            <a href="#actions">Move</a>
-            <a href="#collectresources">Collect resources</a>
-            <a href="#tasks">Perform tasks</a>
-            <a href="#createitems">Create items</a>
-        </div>
-        <a href="#survivalpoints">Survival points</a>
-    </nav>
-    <h2 id="objective">Game objective:</h2>
-    <p>The object of the game is to complete the scenario objectives, scoring as many points as possible.</p>
-    <h2 id="preparation">Game preparation:</h2>
-    <p>To play we need:<br>
-        <br>
-        1 player: solo game sheet, pencil or pen, 4 D6 dice, character marker (meeple preferred), scenario card<br>
-        <br>
-        2-4 players: a character sheet for each player, a common map card for all players, 4 D6 dice, a pen or pencil
-        for each player, character markers for each player (preferably different colored meeples), scenario card
-    </p>
 
-    <h2 id="islandmap">Island map (solo game)</h2>
-    <div id="map">
-        <img src="./images/solo_map.png">
-        <div id="areas">
+    <section>
+        <h2 id="toc">Table of contents</h2>
+        <nav>
+            <a href="#objective">Game objective</a>
+            <a href="#preparation">Game preparation</a>
+            <a href="#islandmap">Map overview</a>
+            <a href="#gameplay">Course of play</a>
+            <div style="padding: 0.5em; border: 1px solid lightgrey; border-radius: 3px;">
+                <span>Actions:</span>
+                <a href="#actions">Move</a>
+                <a href="#collectresources">Collect resources</a>
+                <a href="#tasks">Perform tasks</a>
+                <a href="#createitems">Create items</a>
+            </div>
+            <a href="#items">Items</a>
+            <a href="#survival">Survival</a>
+            <a href="#survivalpoints">Survival points</a>
+            <a href="#turn">Player's turn</a>
+        </nav>
+    </section>
+
+    <section>
+        <h2 id="objective">Game objective:</h2>
+        <p>The object of the game is to complete the scenario objectives, scoring as many points as possible.</p>
+        <h2 id="preparation">Game preparation:</h2>
+        <p>To play we need:<br>
+            <br>
+            1 player: solo game sheet, pencil or pen, 4 D6 dice, character marker (meeple preferred), scenario card<br>
+            <br>
+            2-4 players: a character sheet for each player, a common map card for all players, 4 D6 dice, a pen or
+            pencil
+            for each player, character markers for each player (preferably different colored meeples), scenario card
+        </p>
+
+        <h2 id="islandmap">Island map (solo game)</h2>
+        <div id="map">
+            <img src="./images/solo_map.png">
+            <div id="areas">
+                <div>
+                    <p>Water / Food / Health</p>
+                </div>
+                <div>Tasks</div>
+                <div>Resources</div>
+                <div>Map</div>
+                <div>Time track / Survival points</div>
+                <div>Craftable items</div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 id="gameplay">Course of play:</h2>
+        <p>In the gameplay, the goal is to complete the scenario and at the same time score as many points as possible.
+        </p>
+        <p>In multiplayer, we randomly designate the first player, then take the next player's turn clockwise (no more
+            first
+            player designations).</p>
+        <p> At the beginning of the game, each player chooses a starting point on which to place their character marker
+            - it
+            can be any empty field on the map (or chosen by the scenario).</p>
+        <p> Each turn begins with a roll of 4 D6 dice which constitute the player's action pool.<br>
+            Using them they can perform various <strong>actions</strong>:
+
+        <ul id="actions">
+            <li id="move">
+                <h3>Move:</h3>
+                It costs 1 die point to move each field. This means that for a die value of 5 you
+                can move 5 fields. You can use any number of dice to move or not move at all. Making a move means moving
+                the
+                meeple to a new field (we do not draw anything on the map during a move, we can move on the same fields
+                many
+                times).<br>
+                <br>
+                <div class="steps">
+                    <div>
+                        <img src="./images/move_expl.png">
+                        <span>
+                            Palm fields are an obstacle that you always you have to go around. You can't go through them
+                            nor
+                            can't stop
+                            there.
+                        </span>
+                    </div>
+                </div>
+                <br>
+                You can use any amount of dice per turn to move.<br>
+                <br>
+                You do not have to use all the movement points you get from the dice. You may stop earlier on the field
+                on which you want to perform the action (e.g. move 2 fields using dice with a value of 6). However, this
+                means the player ends their move and loses any remaining points on the die that was used to move.
+            </li>
+            <li id="collectresources">
+                <h3>Collect resources:</h3>
+                There are 3 resources needed to create items in the game.<br>
+                <div class="steps">
+                    <div>
+                        <img src="./images/res_wood.png">
+                        <span>Wood</span>
+                    </div>
+                    <div>
+                        <img src="./images/res_rope.png">
+                        <span>Rope</span>
+                    </div>
+                    <div>
+                        <img src="./images/res_stone.png">
+                        <span>Stone</span>
+                    </div>
+                </div>
+                <br>
+                To get an item we have to enter its field and spend one die of any value. Then cross the item off the
+                map
+                and mark it in your inventory.<br>
+                <br>
+                <div class="steps">
+                    <div>
+                        <img src="./images/collecting_resources_1.png">
+                        <span>We stop at the field of the resource that we want to get.</span>
+                    </div>
+                    <div>
+                        <img src="./images/any_die.png">
+                        <span>We pay the cost of any one die and cross out the resource from the map.</span>
+                    </div>
+                    <div>
+                        <img src="./images/collecting_resources_2.png">
+                        <span>We mark the acquisition of a resource in the inventory.</span>
+                    </div>
+                </div>
+                <br>
+                In the same manner we can also collect food and water which we also mark in the appropriate places water
+                and
+                food resources (and we cross out those collected on the map)<br>
+                Collecting 1 food resource gives 1 resource point. (In various scenarios, different types of food will
+                appear, hence the different symbols.)<br>
+                <br>
+                <div class="steps">
+                    <div>
+                        <img src="./images/marked_field.png">
+                        <span>
+                            Resources and food/water can be captured with any die, but each field of this type is also
+                            marked with a die value.<br>
+                            If we use a die with this value we will get a '<a href="#survivalpoints"><strong>survival
+                                    point</strong></a>'.
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li id="tasks">
+                <h3>Perform tasks:</h3>
+                After entering specific fields we can perform tasks thanks to which we gain points at the end of the
+                game.
+                <div class="steps">
+                    <div>
+                        <img src="./images/tasks_crystals.png">
+                        <span>
+                            <strong>Collecting crystals</strong><br>
+                            Precious crystals can be found on the island. After returning to civilization they can
+                            provide
+                            you with wealth, it is worth collecting them.<br>
+                            <br>
+                            The crystal is collected in the same way as resources, you enter its field and sacrifice a
+                            die
+                            of any value. Then cross the crystal off the map and circle the crystal you've gained in
+                            your
+                            own crystal field. We start marking the crystals on the left side of the map - each new
+                            crystal
+                            gives more points (all are counted separately at the end of the game)<br>
+                            In a multiplayer game, each player counts their own crystals (i.e. crosses off one by one,
+                            if
+                            the other player got 2 it doesn't mean that another will get the straight third one for 10
+                            points)
+                        </span>
+                    </div>
+                    <hr>
+                    <div>
+                        <img src="./images/tasks_smokesign.png">
+                        <span>
+                            <strong>Smoke signs</strong><br>
+                            In certain places on the island we can make smoke signs with a campfire. This way we
+                            increase
+                            our chances of being rescued.<br>
+                            <br>
+                            When you enter any of the smoke marks on the map, sacrifice any die and enter its value into
+                            the
+                            free smoke mark field (also cross it out on the map). (To be able to perform this action,
+                            you
+                            must have the item: campfire!)
+                            <br>Now in order to perform this action elsewhere you will have to use exactly the same dice
+                            value as you used the first time. After performing 4 the player will receive 25 points at
+                            the
+                            end of the game.<br>
+                            In a multi-player game 25 points are awarded to the player who has the most smoke marks
+                            provided
+                            that at least 4 have been made in total. In the event of a tie, each player who participated
+                            gets 5 points.
+                        </span>
+                    </div>
+                    <hr>
+                    <div>
+                        <img src="./images/tasks_masks.png">
+                        <span>
+                            <strong>Masks</strong><br>
+                            Mysterious masks can be found in many corners of the island.<br>
+                            <br>
+                            The mask is collected in the same way as resources - you enter the field with the mask and
+                            sacrifice any of the die.<br>
+                            The mask is plotted on the map on the on the field of collected masks, marking each
+                            successive
+                            mask with a circle.<br>
+                            Each mask that we have collected can be used once - it allows us to change
+                            the value of any die to any chosen one. Only after using the mask we remove its points. For
+                            each
+                            captured but not used mask we get 5 points at the end of the game. Used masks do not give
+                            any
+                            points.
+                        </span>
+                    </div>
+                    <hr>
+                    <div>
+                        <img src="./images/tasks_map.png">
+                        <span>
+                            <strong>Island map</strong><br>
+                            When you reach certain locations on the island, it is possible to make a map of the
+                            island.<br>
+                            <br>
+                            To collect the map you have to enter the field with its marking and then use one of the
+                            required
+                            dice (2,4,5,6) . This value is crossed out and for the next section of the map we will have
+                            to
+                            use
+                            values that are left. After completing the total, the player will receive 25 points at the
+                            end
+                            of
+                            the game.
+                            <br>In a multiplayer game, 25 points are awarded to the player who has the most map sections
+                            -
+                            provided that at least 4 have been completed in total. In case of a tie, each player who
+                            participated gets 5 points.
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li id="createitems">
+                <h3>Create items:</h3>
+                At any time during their turn, the player can create items using the collected resources and certain
+                dice
+                values. This can be spread over any number of turns by adding individual pieces at a time of his
+                choosing.
+                The dice values indicate the plan to create the item. Most items, apart from the points at the end of
+                the
+                game they also allow you to perform special actions...
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2 id="items">Items</h2>
+
+        <div class="steps">
             <div>
-                <p>Water / Food / Health</p>
+                <img src="./images/item_pickaxe.png">
+                <div>
+                    <h3>Pickaxe</h3>
+                    To create a pickaxe we need dice 1 and 3 and one wood and stone.<br>
+                    <br>
+                    The pickaxe you have allows you to collect 2 units of stone each time this resource is mined.<br>
+                    This action is automatic and never exhausts.<br>
+                    <br>
+                    At the end of the game it gives 6 points.
+                </div>
             </div>
-            <div>Tasks</div>
-            <div>Resources</div>
-            <div>Map</div>
-            <div>Time track / Survival points</div>
-            <div>Craftable items</div>
+            <hr>
+            <div>
+                <img src="./images/item_axe.png">
+                <div>
+                    <h3>Axe</h3>
+                    To create a axe we need dice 2 and 4 and one wood and stone.<br>
+                    <br>
+                    The axe you have allows you to collect 2 units of wood each time this resource is mined.<br>
+                    This action is automatic and never exhausts.<br>
+                    <br>
+                    At the end of the game it gives 6 points.
+                </div>
+            </div>
+            <hr>
+            <div>
+                <img src="./images/item_knife.png">
+                <div>
+                    <h3>Knife</h3>
+                    To create a knife we need dice 3 and 5 and one wood and stone.<br>
+                    <br>
+                    The knife you have allows you to collect 2 units of rope each time this resource is mined.<br>
+                    This action is automatic and never exhausts.<br>
+                    <br>
+                    At the end of the game it gives 6 points.
+                </div>
+            </div>
+            <hr>
+            <div>
+                <img src="./images/item_pot.png">
+                <div>
+                    <h3>Pot</h3>
+                    To create a pot we need dice 4 and 6 and one wood and stone.<br>
+                    <br>
+                    The pot you have allows you to collect 2 units of food each time this resource is mined.<br>
+                    This action is automatic and never exhausts.<br>
+                    <br>
+                    At the end of the game it gives 6 points.
+                </div>
+            </div>
+            <hr>
+            <div>
+                <img src="./images/item_flask.png">
+                <div>
+                    <h3>Flask</h3>
+                    To create a flask we need dice 5 and 2 and one wood and rope.<br>
+                    <br>
+                    The flask you have allows you to collect 2 units of water each time this resource is mined.<br>
+                    This action is automatic and never exhausts.<br>
+                    <br>
+                    At the end of the game it gives 6 points.
+                </div>
+            </div>
+            <hr>
+            <div>
+                <img src="./images/item_bow.png">
+                <div>
+                    <h3>Bow</h3>
+                    To create a bow we need dice 6 and 3 and one wood and rope.<br>
+                    <br>
+                    The bow you have allows you to hunt lizards. With the bow we can go through the areas occupied by
+                    them
+                    by removing them from the map (cross them out) and for each lizard we gain the points signed on it
+                    and 1 food portion. A hunting action costs one die with a value equal to or higher than the lizard's
+                    point value.<br>
+                    <br>
+                    <div class="steps">
+                        <div>
+                            <img src="./images/hunt.png"><br>
+                            <span>In order to hunt this lizard you must use a die with a value of 3 or more.</span>
+                        </div>
+                    </div>
+                    <br>
+                    At the end of the game it gives 6 points.
+                </div>
+            </div>
+            <hr>
+            <div>
+                <img src="./images/item_tent.png">
+                <div>
+                    <h3>Tent</h3>
+                    To make a tent we need dice 1, 2 and 5 and three rope.<br>
+                    <br>
+                    After using the required dice, we can build multiple tents by drawing it on the empty field on which
+                    we
+                    are standing. (Being on an empty field is necessary.) Each time a tent is built, the required cost
+                    will
+                    be 3 ropes. However, the dice are paid only once...<br>
+                    <br>
+                    In a multiplayer game, the player will mark which tent is theirs by using some form of mark like a
+                    number or their initials. Other players can destroy this tent after entering this field and using
+                    any
+                    one of the die.<br>
+                    <br>
+                    At the end of the game each tent gives 15 points.
+                </div>
+            </div>
+            <hr>
+            <div>
+                <img src="./images/item_campfire.png">
+                <div>
+                    <h3>Campfire</h3>
+                    To make a campfire we need dice 1,3 and 6 and three wood pieces.<br>
+                    <br>
+                    After using the required dice, we can build multiple campfires by drawing it on the empty field on
+                    which
+                    we are standing.(Being on an empty field is necessary.) Each time a campfire is built, the required
+                    cost
+                    will be 3 wood pieces. However, the dice are paid only once.<br>
+                    <br>
+                    In a multiplayer game, the player will mark which campfire is theirs by using some form of mark like
+                    a
+                    number or their initials. Other players can destroy this campfire after entering this field and
+                    using
+                    any one of the die.<br>
+                    <br>
+                    At the end of the game each campfire gives 15 points.
+                </div>
+            </div>
+            <hr>
+            <div>
+                <img src="./images/item_raft.png">
+                <div>
+                    <h3>Raft</h3>
+                    Raft To create the raft we need dice 1,2,3 and 4 and two of each wood, rope and stone.<br>
+                    <br>
+                    The raft is the highest scoring item in the game.<br>
+                    <br>
+                    At the end of the game it gives 35 points.
+                </div>
+            </div>
         </div>
-    </div>
-    <h2 id="gameplay">Course of play:</h2>
-    <p>In the gameplay, the goal is to complete the scenario and at the same time score as many points as possible.</p>
-    <p>In multiplayer, we randomly designate the first player, then take the next player's turn clockwise (no more first
-        player designations).</p>
-    <p> At the beginning of the game, each player chooses a starting point on which to place their character marker - it
-        can be any empty field on the map (or chosen by the scenario).</p>
-    <p> Each turn begins with a roll of 4 D6 dice which constitute the player's action pool.<br>
-        Using them they can perform various <strong>actions</strong>:
+    </section>
 
-    <ul id="actions">
-        <li id="move">
-            <h3>Move:</h3>
-            It costs 1 die point to move each field. This means that for a die value of 5 you
-            can move 5 fields. You can use any number of dice to move or not move at all. Making a move means moving the
-            meeple to a new field (we do not draw anything on the map during a move, we can move on the same fields many
-            times).<br>
-            <br>
-            <div class="steps">
-                <div>
-                    <img src="./images/move_expl.png">
-                    <span>
-                        Palm fields are an obstacle that you always you have to go around. You can't go through them nor
-                        can't stop
-                        there.
-                    </span>
-                </div>
-            </div>
-            <br>
-            You can use any amount of dice per turn to move.<br>
-            <br>
-            You do not have to use all the movement points you get from the dice. You may stop earlier on the field
-            on which you want to perform the action (e.g. move 2 fields using dice with a value of 6). However, this
-            means the player ends their move and loses any remaining points on the die that was used to move.
-        </li>
-        <li id="collectresources">
-            <h3>Collect resources:</h3>
-            There are 3 resources needed to create items in the game.<br>
-            <div class="steps">
-                <div>
-                    <img src="./images/res_wood.png">
-                    <span>Wood</span>
-                </div>
-                <div>
-                    <img src="./images/res_rope.png">
-                    <span>Rope</span>
-                </div>
-                <div>
-                    <img src="./images/res_stone.png">
-                    <span>Stone</span>
-                </div>
-            </div>
-            <br>
-            To get an item we have to enter its field and spend one die of any value. Then cross the item off the map
-            and mark it in your inventory.<br>
-            <br>
-            <div class="steps">
-                <div>
-                    <img src="./images/collecting_resources_1.png">
-                    <span>We stop at the field of the resource that we want to get.</span>
-                </div>
-                <div>
-                    <img src="./images/any_die.png">
-                    <span>We pay the cost of any one die and cross out the resource from the map.</span>
-                </div>
-                <div>
-                    <img src="./images/collecting_resources_2.png">
-                    <span>We mark the acquisition of a resource in the inventory.</span>
-                </div>
-            </div>
-            <br>
-            In the same manner we can also collect food and water which we also mark in the appropriate places water and
-            food resources (and we cross out those collected on the map)<br>
-            Collecting 1 food resource gives 1 resource point. (In various scenarios, different types of food will
-            appear, hence the different symbols.)<br>
-            <br>
-            <div class="steps">
-                <div>
-                    <img src="./images/marked_field.png">
-                    <span>
-                        Resources and food/water can be captured with any die, but each field of this type is also
-                        marked with a die value.<br>
-                        If we use a die with this value we will get a '<a href="#survivalpoints"><strong>survival
-                                point</strong></a>'.
-                    </span>
-                </div>
-            </div>
-        </li>
-        <li id="tasks">
-            <h3>Perform tasks:</h3>
-            After entering specific fields we can perform tasks thanks to which we gain points at the end of the game.
-            <div class="steps">
-                <div>
-                    <img src="./images/tasks_crystals.png">
-                    <span>
-                        <strong>Collecting crystals</strong><br>
-                        Precious crystals can be found on the island. After returning to civilization they can provide
-                        you with wealth, it is worth collecting them.<br>
-                        <br>
-                        The crystal is collected in the same way as resources, you enter its field and sacrifice a die
-                        of any value. Then cross the crystal off the map and circle the crystal you've gained in your
-                        own crystal field. We start marking the crystals on the left side of the map - each new crystal
-                        gives more points (all are counted separately at the end of the game)<br>
-                        In a multiplayer game, each player counts their own crystals (i.e. crosses off one by one, if
-                        the other player got 2 it doesn't mean that another will get the straight third one for 10
-                        points)
-                    </span>
-                </div>
-                <hr>
-                <div>
-                    <img src="./images/tasks_smokesign.png">
-                    <span>
-                        <strong>Smoke signs</strong><br>
-                        In certain places on the island we can make smoke signs with a campfire. This way we increase
-                        our chances of being rescued.<br>
-                        <br>
-                        When you enter any of the smoke marks on the map, sacrifice any die and enter its value into the
-                        free smoke mark field (also cross it out on the map). (To be able to perform this action, you
-                        must have the item: campfire!)
-                        <br>Now in order to perform this action elsewhere you will have to use exactly the same dice
-                        value as you used the first time. After performing 4 the player will receive 25 points at the
-                        end of the game.<br>
-                        In a multi-player game 25 points are awarded to the player who has the most smoke marks provided
-                        that at least 4 have been made in total. In the event of a tie, each player who participated
-                        gets 5 points.
-                    </span>
-                </div>
-                <hr>
-                <div>
-                    <img src="./images/tasks_masks.png">
-                    <span>
-                        <strong>Masks</strong><br>
-                        Mysterious masks can be found in many corners of the island.<br>
-                        <br>
-                        The mask is collected in the same way as resources - you enter the field with the mask and
-                        sacrifice any of the die.<br>
-                        The mask is plotted on the map on the on the field of collected masks, marking each successive
-                        mask with a circle.<br>
-                        Each mask that we have collected can be used once - it allows us to change
-                        the value of any die to any chosen one. Only after using the mask we remove its points. For each
-                        captured but not used mask we get 5 points at the end of the game. Used masks do not give any
-                        points.
-                    </span>
-                </div>
-                <hr>
-                <div>
-                    <img src="./images/tasks_map.png">
-                    <span>
-                        <strong>Island map</strong><br>
-                        When you reach certain locations on the island, it is possible to make a map of the island.<br>
-                        <br>
-                        To collect the map you have to enter the field with its marking and then use one of the required
-                        dice (2,4,5,6) . This value is crossed out and for the next section of the map we will have to
-                        use
-                        values that are left. After completing the total, the player will receive 25 points at the end
-                        of
-                        the game.
-                        <br>In a multiplayer game, 25 points are awarded to the player who has the most map sections -
-                        provided that at least 4 have been completed in total. In case of a tie, each player who
-                        participated gets 5 points.
-                    </span>
-                </div>
-            </div>
-        </li>
-        <li id="createitems">
-            <h3>Create items:</h3>
-            At any time during their turn, the player can create items using the collected resources and certain dice
-            values. This can be spread over any number of turns by adding individual pieces at a time of his choosing.
-            The dice values indicate the plan to create the item. Most items, apart from the points at the end of the
-            game they also allow you to perform special actions...
-        </li>
-    </ul>
+    <section>
+        <h2 id="survival">Survival</h2>
+        <p>Each turn of the game is marked on the time track.</p>
 
-    <h2 id="survivalpoints">Survival points:</h2>
+        <img src="./images/survival_track.png">
+        <p>From turn 3, the player begins to eye hunger and thirst. In the turns marked with the corresponding symbols
+            they
+            must sacrifice a water or food resource.</p>
 
-    <p>If you get a survival point, you do not have to use it right away. You can mark it with a vertical line on the
-        survival points track on your board and use it later (also several at once during one turn).<br>
-        Each captured and not used survival point gives 1 point at the end of the game.</p>
-    <p>
-        By using it we can:
+        <img src="./images/survival_health.png">
+        <p>If a player does not have the required food or water supply, they lose 1 health point. Losing all 3 health
+            points means the end of the game for that player.</p>
+        <p>
+            <strong> A player who dies before the end of the game keeps his points and takes part in the points summary
+                with
+                other
+                players, if he managed to meet the scenario requirements, if not then he competes in points only with
+                other
+                players
+                who also failed to complete the task.</strong>
+        </p>
+    </section>
 
-    </p>
-    <div class="steps">
-        <div>
-            <img src="./images/inc_dec_die.png">
-            <span>Increase or decrease by 1 the value of one of the remaining (not yet used) die. An increase of 6 means
-                going to the value of 1</span>
+    <section>
+        <h2 id="survivalpoints">Survival points:</h2>
+
+        <p>If you get a survival point, you do not have to use it right away. You can mark it with a vertical line on
+            the
+            survival points track on your board and use it later (also several at once during one turn).<br>
+            Each captured and not used survival point gives 1 point at the end of the game.</p>
+        <p>By using it we can:</p>
+        <div class="steps">
+            <div>
+                <img src="./images/inc_dec_die.png">
+                <span>Increase or decrease by 1 the value of one of the remaining (not yet used) die. An increase of 6
+                    means
+                    going to the value of 1</span>
+            </div>
+            <div>
+                <img src="./images/reroll_die.png">
+                <span>Roll one of the remaining unused die again.</span>
+            </div>
+            <div>
+                <img src="./images/pass_through_occupied_field.png">
+                <span>Pass through a blocked field (also by another player). However, you cannot stop there!</span>
+            </div>
         </div>
-        <div>
-            <img src="./images/reroll_die.png">
-            <span>Roll one of the remaining unused die again.</span>
+    </section>
+
+    <section>
+        <h2 id="turn">Player's turn</h2>
+        <ol>
+            <li>The active player makes a 4 D6 dice roll</li>
+            <li>The active player performs actions (in any order, use all dice)</li>
+            <li>Pass dice to the next player (multiplayer only)</li>
+            <li>After all players have moved, the game day passes and each player marks the passage of day time and any
+                loss of food and water</li>
+        </ol>
+
+        <p><strong>Remember - in multiplayer mode, everyone moves around a shared map and collected resources and quest
+                items are are crossed off, making them inaccessible to others!</strong></p>
+
+        <div class="steps">
+            <div>
+                <img src="./images/player_blocks.png">
+                <span>A player may not pass or stop on a field already occupied by another player (they block this
+                    field).</span>
+            </div>
+            <div>
+                <img src="./images/lizard_blocks.png">
+                <span>A player may not stand on a field occupied by a lizard if they don't have the bow and don't kill
+                    the lizard</span>
+            </div>
         </div>
-        <div>
-            <img src="./images/pass_through_occupied_field.png">
-            <span>Pass through a blocked field (also by another player). However, you cannot stop there!</span>
+
+        <p>The player can freely pass through the remaining fields (regardless of whether they were used up or not).
+            Players are blocked by palm trees, other players, lizards (if there is no bow) or new elements that may
+            appear in scenarios.</p>
+
+        <div class="steps">
+            <div>
+                <img src="./images/hunting.png">
+                <div>A player with a bow may enter a field with a lizard by sacrificing an additional die with a value
+                    equal to or higher than the lizard's points for hunting. He gets 1 point of food for this.<br>
+                    <br>
+                    In multiplayer, the player who hunted the lizard marks his prey with a number or a letter.
+                </div>
+            </div>
         </div>
+    </section>
+
 </body>
 
 </html>
